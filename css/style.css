@@ -1,0 +1,7 @@
+a:hover{
+    text-decoration: none;
+}
+
+.card-img-top:hover{
+    opacity: 0.80;
+}
