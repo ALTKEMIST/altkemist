@@ -5,3 +5,7 @@ a:hover{
 .card-img-top:hover{
     opacity: 0.80;
 }
+
+.card:hover{
+    box-shadow: 2px 2px 2px grey;
+}
