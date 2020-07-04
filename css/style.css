@@ -13,3 +13,7 @@ a:hover{
 .proy{
     float: right;
 }
+
+.container-fluid{
+    max-width: 1200px;
+}
