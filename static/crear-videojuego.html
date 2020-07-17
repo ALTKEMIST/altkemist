@@ -168,18 +168,16 @@
         <script src="../vendor/jssocials/jssocials.js"></script>
         <script>
             $("#shareIconsCount").jsSocials({
-                url: "http://www.google.com",
-                text: "Google Search Page",
+                url: window.location.url,
+                text: "NotFound Games Reseñas",
                 showCount: true,
                 showLabel: false,
                 shares: [
-                    { share: "twitter", via: "artem_tabalin", hashtags: "search,google" },
+                    "twitter",
                     "facebook",
-                    "googleplus",
-                    "linkedin",
-                    "pinterest",
-                    "stumbleupon",
-                    "whatsapp"
+                    "whatsapp",
+                    "telegram",
+                    "email"
                 ]
             });
         </script>
