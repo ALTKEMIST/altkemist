@@ -17,10 +17,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../vendor/jssocials/jssocials.css">
+    <link rel="stylesheet" href="../vendor/jssocials/jssocials-theme-flat.css">
+
     <link rel="shortcut icon" href="../img/ALTKEMIST_ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-    <title> Artículo: ¿Cómo crear un videojuego?
-    </title>
+    <title> Artículo: ¿Cómo crear un videojuego?</title>
 </head>
 <body>
      <!-- NavBar -->
@@ -52,8 +55,10 @@
                 <h1 class="alert alert-primary">
                     Artículo: ¿Cómo crear un videojuego?
                 </h1>
-                <table class="table"><tr><td><h6><b>Autor:</b> Isaac Quinzada</h6></td><td class="text-right"><h6><b>Fecha:</b> 24/08/2018</h6></td></tr></table>
+                <table class="table "><tr><td><h6><b>Autor:</b> Isaac Quinzada</h6></td><td class="text-right"><h6><b>Fecha:</b> 24/08/2018</h6></td></tr></table>
                 
+                <div id="shareIconsCount"></div>
+                <hr>
                 <p>
                     Todo videojuego necesita seguir una serie de pasos, una lista de requerimientos que lo pueden volver un buen juego o que de no cumplirlas podrían condenarlo al fracaso. En este artículo vamos a repasar de manera simplificada ¿Qué pasos debemos seguir para crear una obra de arte de los videojuegos?
                 </p>
@@ -159,6 +164,25 @@
         <!-- Scripts -->
         <script src="../vendor/jquery/jquery-3.3.1.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="../vendor/jssocials/jssocials.js"></script>
+        <script>
+            $("#shareIconsCount").jsSocials({
+                url: "http://www.google.com",
+                text: "Google Search Page",
+                showCount: true,
+                showLabel: false,
+                shares: [
+                    { share: "twitter", via: "artem_tabalin", hashtags: "search,google" },
+                    "facebook",
+                    "googleplus",
+                    "linkedin",
+                    "pinterest",
+                    "stumbleupon",
+                    "whatsapp"
+                ]
+            });
+        </script>
         <script src="../js/main.js"></script>
         
         <!--Disqus-->
