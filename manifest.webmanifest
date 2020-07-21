@@ -1,0 +1,8 @@
+{
+    "name": "Altkemist Software",
+    "short_name": "Altkemist",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "index.html"
+}

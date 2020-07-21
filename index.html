@@ -28,6 +28,19 @@
     <meta name="application-name" content="Altkemist">
     <link rel="stylesheet" href="./css/style.css">
     <title>Altkemist</title>
+    <!-- loading pwa -->
+    <script src="vendor/workbox/workbox-sw.js"></script>
+    <!-- manifest del app -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
     <script src="https://partnerads.emgrtools.com/js/v1/go.js" async></script>
 </head>
 <body>
