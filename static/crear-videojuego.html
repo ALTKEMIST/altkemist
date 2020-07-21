@@ -120,7 +120,9 @@
                             Por último, debes corregir todos los errores que tenga tu videojuego, esta es la etapa más larga y permitirá que tu videojuego siga siendo disfrutable tal y como se pensó. A nadie le gusta que un programa no actúe de la manera en que debería, por lo que debes asegurarte de comprobar todas las opciones posibles.    
                         </p>
                     <hr>
-                <div id="disqus_thread"></div>
+                    <button class="btn btn-block btn-secondary btn-lg" onclick="showComments()">VER COMENTARIOS</button>
+                    <hr>
+                    <div id='disqus_thread'></div>
             </div>
         </div>
     </div>
@@ -184,17 +186,22 @@
         
         <!--Disqus-->
         <script>
+            var comm = 0;
+
+            function showComments(){
+                if (comm == 0){
+                    comm++;
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                }                
+            }
+
             var disqus_config = function () {
-            this.page.url = "https://altkemist.github.io/altkemist/static/crear-videojuego.html"
+                this.page.url = "https://altkemist.github.io/altkemist/static/crear-videojuego.html"
             this.page.identifier = "$2y$10$FCmJEhAO4pR5Em2PKc.i6u5gJXAb.tQuAsPWxqOWnC1LaxIcXfRc6"
             };
-
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
         </script>
 </body>
 </html>

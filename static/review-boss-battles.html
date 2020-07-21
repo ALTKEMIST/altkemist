@@ -248,7 +248,9 @@
                     
 
                 <hr>
-                <div id="disqus_thread"></div>
+                <button class="btn btn-block btn-secondary btn-lg" onclick="showComments()">VER COMENTARIOS</button>
+                <hr>
+                <div id='disqus_thread'></div>
             </div>
         </div>
     </div>
@@ -312,17 +314,22 @@
         
         <!--Disqus-->
         <script>
-            var disqus_config = function () {
-            this.page.url = "https://altkemist.github.io/altkemist/static/review-boss-battles.html"
-            this.page.identifier = "$2a$10$YfMJWVhwLvPVX.Q8mP8/iOxSqUDG6evUvjRXnzBLU0VCasasZkHNm"
-            };
+            var comm = 0;
 
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+            function showComments(){
+                if (comm == 0){
+                    comm++;
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                }                
+            }
+
+            var disqus_config = function () {
+                this.page.url = "https://altkemist.github.io/altkemist/static/review-boss-battles.html"
+                this.page.identifier = "$2a$10$YfMJWVhwLvPVX.Q8mP8/iOxSqUDG6evUvjRXnzBLU0VCasasZkHNm"
+            };
         </script>
 </body>
 </html>

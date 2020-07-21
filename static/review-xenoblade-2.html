@@ -273,38 +273,12 @@
                     mejor con las mismas.
                 </p><img class="d-block w-100" src="./img-review/xenoblade 2/xnb0.jpg"/><hr>
                 <div class="alert alert-danger">
-                <h1 >
-                <strong>Nota Final: 9.2</strong></h1>
                 <h3 class="text-right text-white"><em>“Una aventura sublime e imprescindible”</em></h3>
                 </div>
-                <table class=table>
-                    <tr>
-                        <td>
-                            Historia: 10
-                        </td>
-                        <td>
-                            Jugabilidad: 9
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Gráficos: 8
-                        </td>
-                        <td>
-                            Sonido: 10
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Diseño: 9
-                        </td>
-                        <td>
-                            Multijugador: -
-                        </td>
-                    </tr>
-                </table>
                 <hr>
-                <div id="disqus_thread"></div>
+                <button class="btn btn-block btn-secondary btn-lg" onclick="showComments()">VER COMENTARIOS</button>
+                <hr>
+                <div id='disqus_thread'></div>
             </div>
         </div>
     </div>
@@ -368,17 +342,22 @@
         
         <!--Disqus-->
         <script>
-            var disqus_config = function () {
-            this.page.url = "https://altkemist.github.io/altkemist/static/review-xenobladec-2.html"
-            this.page.identifier = "$2a$10$YfMJWVhwLvPVX.Q8mP8/iOxSqUDG6evUvjRXnzBLU0VCbqrpZkHNm"
-            };
+            var comm = 0;
 
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+            function showComments(){
+                if (comm == 0){
+                    comm++;
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                }                
+            }
+
+            var disqus_config = function () {
+                this.page.url = "https://altkemist.github.io/altkemist/static/review-xenobladec-2.html"
+                this.page.identifier = "$2a$10$YfMJWVhwLvPVX.Q8mP8/iOxSqUDG6evUvjRXnzBLU0VCbqrpZkHNm"
+            };
         </script>
 </body>
 </html>

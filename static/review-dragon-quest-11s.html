@@ -191,38 +191,12 @@
                 <img class="d-block w-100" src="./img-review/dq11s/dq10.jpg"/>
                 <br><center><h4>¡Atrévete a iniciar la aventura!</h4></center><hr>
                 <div class="alert alert-danger">
-                <h1 >
-                <strong>Nota Final: 9</strong></h1>
                 <h3 class="text-right text-white"><em>“Uno de los mejores JRPG de esta generación”</em></h3>
                 </div>
-                <table class=table>
-                    <tr>
-                        <td>
-                            Historia: 10
-                        </td>
-                        <td>
-                            Jugabilidad: 9
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Gráficos: 9
-                        </td>
-                        <td>
-                            Sonido: 8
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Diseño: 9
-                        </td>
-                        <td>
-                            Multijugador: -
-                        </td>
-                    </tr>
-                </table>
                 <hr>
-                <div id="disqus_thread"></div>
+                <button class="btn btn-block btn-secondary btn-lg" onclick="showComments()">VER COMENTARIOS</button>
+                <hr>
+                <div id='disqus_thread'></div>
             </div>
         </div>
     </div>
@@ -286,17 +260,22 @@
         
         <!--Disqus-->
         <script>
+            var comm = 0;
+
+            function showComments(){
+                if (comm == 0){
+                    comm++;
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                }                
+            }
+
             var disqus_config = function () {
             this.page.url = "https://altkemist.github.io/altkemist/static/review-dragon-quest-11s.html"
             this.page.identifier = "$2y$12$PIlJaU3f6YSJ8cf1/4ouielgVVJ2p.OmgQj/dC9KddS2P.5Ua/rp6"
             };
-
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
         </script>
 </body>
 </html>

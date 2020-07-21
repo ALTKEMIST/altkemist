@@ -91,8 +91,9 @@
                         Algunas veces nos involucramos en proyectos enormes que a simple vista lucen perfectamente estructurados, pero una pequeña mala decisión en los módulos, características o diseño acaban por condenarlo al fracaso. En sistemas tan complejos como la bolsa de valores, por ejemplo, resulta muy difícil predecir con seguridad los cambios que habrá en un mediano rango de tiempo. Los sistemas finitos que traten de simularles normalmente llegan a tener unos excedentes de error que sobrepasan el cien por ciento. Una de las características fundamentales en el desarrollo de software es lo altamente cambiante que resultan los requerimientos del usuario. Estos van modificándose a lo largo del desarrollo, si tomamos malas decisiones al implementarlos, dichos cambios pueden generar pequeños errores y estos a su vez, afectar negativamente la calidad del producto. Por ello es importante considerar el mayor número de posibilidades posibles al intentar hacer cambios a un proyecto, tomando en cuenta siempre la opción que permita beneficiar a ambas partes, tanto desarrolladores como clientes. Una buena práctica suele ser programar pequeños ejercicios de prueba que intenten reproducir todos los posibles errores que nuestro sistema podría generar y así evitar futuros dolores de cabeza. 
                     </p>
                 <hr>
-                    
-                <div id="disqus_thread"></div>
+                <button class="btn btn-block btn-secondary btn-lg" onclick="showComments()">VER COMENTARIOS</button>
+                <hr>
+                <div id='disqus_thread'></div>
             </div>
         </div>
     </div>
@@ -156,17 +157,22 @@
         
         <!--Disqus-->
         <script>
-            var disqus_config = function () {
-            this.page.url = "https://altkemist.github.io/altkemist/static/efecto-mariposa.html"
-            this.page.identifier = "$2y$10$QItBy.YmJsA796N4A8SMU.8NMfhj1xlbCT/A8DK0I/84MW0GX080m"
-            };
+            var comm = 0;
 
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+            function showComments(){
+                if (comm == 0){
+                    comm++;
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                }                
+            }
+
+            var disqus_config = function () {
+                this.page.url = "https://altkemist.github.io/altkemist/static/efecto-mariposa.html"
+                this.page.identifier = "$2y$10$QItBy.YmJsA796N4A8SMU.8NMfhj1xlbCT/A8DK0I/84MW0GX080m"
+            };
         </script>
 </body>
 </html>

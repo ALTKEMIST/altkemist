@@ -280,38 +280,12 @@
                 <!-- Fin contenido -->
                 <hr>
                 <div class="alert alert-danger">
-                <h1 >
-                <strong>Nota Final: 9</strong></h1>
                 <h3 class="text-right text-white"><em>“Precioso y nostálgico”</em></h3>
                 </div>
-                <table class=table>
-                    <tr>
-                        <td>
-                            Historia: 8
-                        </td>
-                        <td>
-                            Jugabilidad: 10
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Gráficos: 9
-                        </td>
-                        <td>
-                            Sonido: 10
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Diseño: 8
-                        </td>
-                        <td>
-                            Multijugador: 9
-                        </td>
-                    </tr>
-                </table>
                 <hr>
-                <div id="disqus_thread"></div>
+                <button class="btn btn-block btn-secondary btn-lg" onclick="showComments()">VER COMENTARIOS</button>
+                <hr>
+                <div id='disqus_thread'></div>
             </div>
         </div>
     </div>
@@ -375,17 +349,22 @@
         
         <!--Disqus-->
         <script>
-            var disqus_config = function () {
-            this.page.url = "https://altkemist.github.io/altkemist/static/review-pokemon-lets-go.html"
-            this.page.identifier = "$2a$10$hQ2PAfWkfiIn2iXdn.Sch.Urpa9r3C3dcJDmYXGNWX1XIchasnsJG"
-            };
+            var comm = 0;
 
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+            function showComments(){
+                if (comm == 0){
+                    comm++;
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://notfound-games-resenas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                }                
+            }
+
+            var disqus_config = function () {
+                this.page.url = "https://altkemist.github.io/altkemist/static/review-pokemon-lets-go.html"
+                this.page.identifier = "$2a$10$hQ2PAfWkfiIn2iXdn.Sch.Urpa9r3C3dcJDmYXGNWX1XIchasnsJG"
+            };
         </script>
 </body>
 </html>
